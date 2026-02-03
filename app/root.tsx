@@ -26,7 +26,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-   const naviagetion = useNavigation();
+  const naviagetion = useNavigation();
   const isLoading = naviagetion.state === "loading";
   return (
     <html lang="en">
@@ -34,7 +34,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-               <link rel="icon" type="image/png" href={settings.site.logo} />
+        <link rel="icon" type="image/png" href={settings.site.logo} />
 
         {/* Primary Meta Tags */}
         <meta name="title" content={settings.site.title} />
@@ -63,6 +63,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="format-detection" content="telephone=no" />
 
+        {/* Google Site Verification */}
+        <meta
+          name="google-site-verification"
+          content="nQzQLZhPXvGVKUx_DWkfHmPJy8KEQjSoGqjLhTUBlkw"
+        />
+
+        {/* Bing Site Verification */}
+        <meta name="msvalidate.01" content="" />
+
         {/* Security Headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
@@ -71,10 +80,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-          {isLoading && (
+        {isLoading && (
           <div className="fixed inset-0 z-[4000] flex items-center justify-center backdrop-blur-sm ">
             <div className="flex flex-col items-center">
-             <div className="animate-spin rounded-full h-12 w-12 border-b-4 border-green-600"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-4 border-green-600"></div>
               {/* <span className="mt-4 text-green-700 font-semibold">Loading...</span> */}
             </div>
           </div>
