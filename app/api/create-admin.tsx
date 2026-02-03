@@ -12,10 +12,10 @@ export const action: ActionFunction = async ({ request }) => {
     const { name, email, password, contact } = body;
  
   try {
-    //     const admin = await requireAdminSession(request);
-    // if (admin) {
-    //   return Response.json({ error: "Unauthorized", success: false }, { status: 401 });
-    // }
+        const admin = await requireAdminSession(request);
+    if (admin) {
+      return Response.json({ error: "Unauthorized", success: false }, { status: 401 });
+    }
     if (!name || !email || !password) {
       return Response.json({ 
         error: "All fields are required", 
