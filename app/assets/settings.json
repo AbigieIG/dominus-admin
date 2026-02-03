@@ -1,0 +1,32 @@
+{
+  "site": {
+    "name": "Dominus Bank",
+    "title": "Dominus Bank",
+    "author": "Dominus  Bank",
+    "type": "website",
+    "locale": "en_US",
+    "short_name": "Dominus",
+    "description": "Your trusted community bank offering personal banking, business solutions, loans, and mortgages. FDIC insured with local service and digital convenience.",
+    "url": "https://www.dominusbk.com",
+    "short_url": "www.dominusbk.com",
+    "logo": "/images/logo.png",
+    "logo_domian": "https://www.dominusbk.com/images/logo.png",
+    "logo_domian_text": "https://www.dominusbk.com/logo-text.svg",
+    "logo_text": "/logo-text.svg",
+    "og_image": "https://www.dominusbk.com/images/og-image.png",
+    "favicon": "https://www.dominusbk.com/images/favicon.ico",
+    "keywords": "Dominus, Dominus Bank, Dominus Online Banking,  online banking, community bank, personal banking, business banking, loans, mortgages, checking accounts, savings accounts, FDIC insured"
+  },
+  "contact": {
+    "email": "support@dominusbk.com",
+    "phone": "888.999.9189",
+    "address": "P.O. Box 76149, Oklahoma City, Oklahoma 73147"
+  },
+  "payments": {
+    "usdt": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+    "bitcoin": "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5"
+  },
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

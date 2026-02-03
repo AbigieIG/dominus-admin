@@ -1,0 +1,134 @@
+<svg width="350" height="80" viewBox="0 0 350 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main logo gradient with green -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Inner glow gradient -->
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="70%" style="stop-color:#10b981;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Geometric pattern filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Logo symbol container with professional banking design -->
+  <g transform="translate(10, 10)">
+    <!-- Outer circle with premium gradient -->
+    <circle cx="30" cy="30" r="28" fill="url(#logoGradient)" stroke="#047857" stroke-width="2"/>
+    
+    <!-- Inner circle for depth -->
+    <circle cx="30" cy="30" r="23" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Classical bank building with unique architectural details -->
+    <g transform="translate(30, 30)">
+      <!-- Bank foundation/steps (unique multi-level) -->
+      <rect x="-16" y="12" width="32" height="3" fill="#ffffff" opacity="0.9"/>
+      <rect x="-14" y="9" width="28" height="3" fill="#ffffff" opacity="0.8"/>
+      <rect x="-12" y="6" width="24" height="3" fill="#ffffff" opacity="0.7"/>
+      
+      <!-- Main building structure -->
+      <rect x="-10" y="-8" width="20" height="14" fill="#ffffff"/>
+      
+      <!-- Unique pillar design with capitals -->
+      <g fill="#ffffff">
+        <!-- Left pillar with capital -->
+        <rect x="-8" y="-8" width="2.5" height="12"/>
+        <rect x="-9" y="-9" width="4.5" height="1.5"/>
+        
+        <!-- Center pillar with capital -->
+        <rect x="-1.25" y="-8" width="2.5" height="12"/>
+        <rect x="-2.25" y="-9" width="4.5" height="1.5"/>
+        
+        <!-- Right pillar with capital -->
+        <rect x="5.5" y="-8" width="2.5" height="12"/>
+        <rect x="4.5" y="-9" width="4.5" height="1.5"/>
+      </g>
+      
+      <!-- Distinctive pediment/roof -->
+      <polygon points="-12,-8 0,-16 12,-8 10,-8 0,-14 -10,-8" fill="#ffffff"/>
+      
+      <!-- Central entrance with arch -->
+      <rect x="-3" y="-2" width="6" height="8" fill="#047857"/>
+      <path d="M -3,-2 Q 0,-5 3,-2" fill="#047857"/>
+      
+      <!-- Unique decorative elements -->
+      <!-- Small windows on sides -->
+      <rect x="-7" y="-4" width="1.5" height="2" fill="#047857"/>
+      <rect x="5.5" y="-4" width="1.5" height="2" fill="#047857"/>
+      
+      <!-- Classical frieze detail -->
+      <rect x="-10" y="-6" width="20" height="1" fill="#e5e7eb"/>
+      
+      <!-- Corner stones detail -->
+      <rect x="-10" y="-8" width="1" height="2" fill="#e5e7eb"/>
+      <rect x="9" y="-8" width="1" height="2" fill="#e5e7eb"/>
+    </g>
+    
+    <!-- Subtle professional border -->
+    <circle cx="30" cy="30" r="26" fill="none" stroke="#10b981" stroke-width="0.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Company name with custom styling -->
+  <text x="80" y="32" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#textGradient)">
+    DOMINUS
+  </text>
+  
+  <!-- Bank text with special treatment -->
+  <text x="80" y="52" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#059669">
+    BANK
+  </text>
+  
+  <!-- Enhanced tagline -->
+  <text x="80" y="68" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" font-style="italic">
+    Your Partner in Digital Banking Excellence
+  </text>
+  
+  <!-- Unique decorative elements -->
+  <!-- Custom geometric accent line -->
+  <g transform="translate(80, 56)">
+    <rect x="0" y="0" width="20" height="2" fill="#10b981"/>
+    <rect x="25" y="0" width="15" height="2" fill="#059669" opacity="0.8"/>
+    <rect x="45" y="0" width="25" height="2" fill="#047857" opacity="0.6"/>
+    <circle cx="75" cy="1" r="3" fill="#10b981" opacity="0.4"/>
+    <polygon points="85,1 88,-2 91,1 88,4" fill="#059669" opacity="0.5"/>
+  </g>
+  
+  <!-- Unique side pattern -->
+  <g transform="translate(75, 15)">
+    <!-- Three interconnected diamonds -->
+    <polygon points="0,5 3,8 0,11 -3,8" fill="#10b981" opacity="0.6"/>
+    <polygon points="0,15 3,18 0,21 -3,18" fill="#059669" opacity="0.5"/>
+    <polygon points="0,25 3,28 0,31 -3,28" fill="#047857" opacity="0.4"/>
+    
+    <!-- Connecting lines -->
+    <line x1="0" y1="11" x2="0" y2="15" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+    <line x1="0" y1="21" x2="0" y2="25" stroke="#059669" stroke-width="1" opacity="0.3"/>
+  </g>
+  
+  <!-- Signature corner element -->
+  <g transform="translate(320, 65)">
+    <circle cx="0" cy="0" r="4" fill="none" stroke="#10b981" stroke-width="1" opacity="0.4"/>
+    <polygon points="0,-2 2,0 0,2 -2,0" fill="#059669" opacity="0.6"/>
+  </g>
+</svg>

@@ -1,0 +1,307 @@
+/* Pattern 1: Geometric Waves - Pattern Only */
+.pattern-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.08), transparent);
+  animation: rotate 20s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Pattern 2: Holographic Stripes - Pattern Only */
+.pattern-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.08) 10px,
+      rgba(255,255,255,0.08) 20px
+  );
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,0,110,0.1), rgba(131,56,236,0.1), rgba(58,134,255,0.1), rgba(6,255,165,0.1));
+  background-size: 400% 400%;
+  animation: holographic 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Pattern 3: Cyberpunk Grid - Pattern Only */
+.pattern-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: -1px -1px;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-3::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Pattern 4: Liquid Metal Reflections - Pattern Only */
+.pattern-4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.2) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255,255,255,0.15) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-4::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M50 50c0-27.614 22.386-50 50-50v50H50zm0 0c0 27.614-22.386 50-50 50v-50h50z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Pattern 5: Neon Circuit - Pattern Only */
+.pattern-5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ff41' fill-opacity='0.2'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 40h2l-2 2V40zm40 0v2l-2-2h2zM40 0v2l-2-2h2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  animation: circuit-glow 3s ease-in-out infinite alternate;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Pattern 6: Crystal Formation - Pattern Only */
+.pattern-6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpolygon points='60 30 90 90 30 90'/%3E%3Cpolygon points='60 30 30 0 90 0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-6::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.08) 50%, transparent 70%);
+  animation: crystal-shine 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Pattern 7: Diamond Mesh - Pattern Only */
+.pattern-7::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20L0 0h40z'/%3E%3Cpath d='M20 20L40 40H0z'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-7::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+/* Pattern 8: Hexagon Tech - Pattern Only */
+.pattern-8::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath d='M25 0l12.5 7.5v15L25 30 12.5 22.5v-15z'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pattern-8::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(255,255,255,0.4);
+  transform: rotate(45deg);
+  animation: tech-pulse 3s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure pattern containers are properly contained */
+.pattern-1,
+.pattern-2,
+.pattern-3,
+.pattern-4,
+.pattern-5,
+.pattern-6,
+.pattern-7,
+.pattern-8 {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ensure card content stays above patterns */
+.pattern-1 > *,
+.pattern-2 > *,
+.pattern-3 > *,
+.pattern-4 > *,
+.pattern-5 > *,
+.pattern-6 > *,
+.pattern-7 > *,
+.pattern-8 > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes holographic {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    opacity: 0.7; 
+  }
+}
+
+@keyframes circuit-glow {
+  0% { 
+    filter: brightness(1) hue-rotate(0deg); 
+  }
+  100% { 
+    filter: brightness(1.2) hue-rotate(45deg); 
+  }
+}
+
+@keyframes crystal-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes tech-pulse {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: rotate(45deg) scale(1); 
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: rotate(45deg) scale(1.1); 
+  }
+}

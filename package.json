@@ -1,0 +1,41 @@
+{
+  "name": "",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev --host ",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.7.1",
+    "@react-router/serve": "^7.7.1",
+    "@vercel/react-router": "^1.2.3",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.7.0",
+    "html2canvas": "^1.4.1",
+    "isbot": "^5.1.27",
+    "jspdf": "^3.0.2",
+    "lucide-react": "^0.542.0",
+    "mongoose": "^8.18.0",
+    "nodemailer": "^7.0.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.7.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.7.1",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^20.19.14",
+    "@types/nodemailer": "^7.0.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

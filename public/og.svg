@@ -1,0 +1,159 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient Background - Green Theme -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#065f46;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Logo gradient from your design -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Pattern -->
+    <pattern id="dotPattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="40" r="2" fill="rgba(255,255,255,0.1)"/>
+      <circle cx="64" cy="40" r="1.5" fill="rgba(255,255,255,0.05)"/>
+      <circle cx="40" cy="20" r="1" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.06)"/>
+    </pattern>
+    
+    <!-- Shadow Filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+    
+    <!-- Logo Shadow -->
+    <filter id="logoShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Pattern Overlay -->
+  <rect width="1200" height="630" fill="url(#dotPattern)" opacity="0.4"/>
+  
+  <!-- Your Logo (scaled up and positioned) -->
+  <g transform="translate(540, 80) scale(2.5)" filter="url(#logoShadow)">
+    <!-- Outer circle with premium gradient -->
+    <circle cx="30" cy="30" r="28" fill="url(#logoGradient)" stroke="#047857" stroke-width="2"/>
+    
+    <!-- Inner circle for depth -->
+    <circle cx="30" cy="30" r="23" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Classical bank building with unique architectural details -->
+    <g transform="translate(30, 30)">
+      <!-- Bank foundation/steps (unique multi-level) -->
+      <rect x="-16" y="12" width="32" height="3" fill="#ffffff" opacity="0.9"/>
+      <rect x="-14" y="9" width="28" height="3" fill="#ffffff" opacity="0.8"/>
+      <rect x="-12" y="6" width="24" height="3" fill="#ffffff" opacity="0.7"/>
+      
+      <!-- Main building structure -->
+      <rect x="-10" y="-8" width="20" height="14" fill="#ffffff"/>
+      
+      <!-- Unique pillar design with capitals -->
+      <g fill="#ffffff">
+        <!-- Left pillar with capital -->
+        <rect x="-8" y="-8" width="2.5" height="12"/>
+        <rect x="-9" y="-9" width="4.5" height="1.5"/>
+        
+        <!-- Center pillar with capital -->
+        <rect x="-1.25" y="-8" width="2.5" height="12"/>
+        <rect x="-2.25" y="-9" width="4.5" height="1.5"/>
+        
+        <!-- Right pillar with capital -->
+        <rect x="5.5" y="-8" width="2.5" height="12"/>
+        <rect x="4.5" y="-9" width="4.5" height="1.5"/>
+      </g>
+      
+      <!-- Distinctive pediment/roof -->
+      <polygon points="-12,-8 0,-16 12,-8 10,-8 0,-14 -10,-8" fill="#ffffff"/>
+      
+      <!-- Central entrance with arch -->
+      <rect x="-3" y="-2" width="6" height="8" fill="#047857"/>
+      <path d="M -3,-2 Q 0,-5 3,-2" fill="#047857"/>
+      
+      <!-- Unique decorative elements -->
+      <!-- Small windows on sides -->
+      <rect x="-7" y="-4" width="1.5" height="2" fill="#047857"/>
+      <rect x="5.5" y="-4" width="1.5" height="2" fill="#047857"/>
+      
+      <!-- Classical frieze detail -->
+      <rect x="-10" y="-6" width="20" height="1" fill="#e5e7eb"/>
+      
+      <!-- Corner stones detail -->
+      <rect x="-10" y="-8" width="1" height="2" fill="#e5e7eb"/>
+      <rect x="9" y="-8" width="1" height="2" fill="#e5e7eb"/>
+    </g>
+    
+    <!-- Subtle professional border -->
+    <circle cx="30" cy="30" r="26" fill="none" stroke="#10b981" stroke-width="0.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="600" y="300" text-anchor="middle" fill="white" font-family="Georgia, serif" font-size="68" font-weight="800" filter="url(#shadow)"> Dominus Bank</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="350" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="400" opacity="0.95">Your Premier Digital Banking Partner</text>
+  
+  <!-- Features Row with Premium Styling -->
+  <g transform="translate(150, 420)">
+    <!-- FDIC Insured -->
+    <g>
+      <rect x="0" y="0" width="200" height="50" rx="25" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="25" cy="25" r="12" fill="rgba(255,255,255,0.9)"/>
+      <text x="21" y="30" fill="#047857" font-family="Arial, sans-serif" font-size="14" font-weight="bold">✓</text>
+      <text x="50" y="30" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="600">FDIC Insured</text>
+    </g>
+    
+    <!-- 24/7 Digital Banking -->
+    <g transform="translate(225, 0)">
+      <rect x="0" y="0" width="240" height="50" rx="25" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="25" cy="25" r="12" fill="rgba(255,255,255,0.9)"/>
+      <rect x="18" y="18" width="14" height="10" rx="2" fill="none" stroke="#047857" stroke-width="2"/>
+      <rect x="20" y="21" width="10" height="1.5" fill="#047857"/>
+      <rect x="20" y="24" width="8" height="1.5" fill="#047857"/>
+      <text x="50" y="30" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="600">24/7 Digital Banking</text>
+    </g>
+    
+    <!-- Local Expertise -->
+    <g transform="translate(490, 0)">
+      <rect x="0" y="0" width="220" height="50" rx="25" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="25" cy="25" r="12" fill="rgba(255,255,255,0.9)"/>
+      <path d="M17 25 L25 17 L33 25 L31 25 L31 33 L19 33 L19 25 Z" fill="#047857"/>
+      <text x="50" y="30" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="600">Local Expertise</text>
+    </g>
+    
+    <!-- Competitive Rates -->
+    <g transform="translate(735, 0)">
+      <rect x="0" y="0" width="240" height="50" rx="25" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="25" cy="25" r="12" fill="rgba(255,255,255,0.9)"/>
+      <text x="20" y="30" fill="#047857" font-family="Arial, sans-serif" font-size="12" font-weight="bold">%</text>
+      <text x="50" y="30" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="600">Competitive Rates</text>
+    </g>
+  </g>
+  
+  <!-- Bottom CTA -->
+  <text x="600" y="530" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="500" opacity="0.9">Experience Banking Excellence Today</text>
+  
+  <!-- Website URL -->
+  <text x="600" y="570" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="400" opacity="0.8">www.fastpayler.us</text>
+  
+  <!-- Premium Decorative Elements -->
+  <circle cx="120" cy="120" r="50" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <circle cx="1080" cy="510" r="70" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <circle cx="1050" cy="100" r="35" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="150" cy="480" r="45" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- Subtle corner accents -->
+  <path d="M 0,0 L 60,0 L 60,20 L 20,20 L 20,60 L 0,60 Z" fill="rgba(255,255,255,0.03)"/>
+  <path d="M 1200,630 L 1140,630 L 1140,610 L 1180,610 L 1180,570 L 1200,570 Z" fill="rgba(255,255,255,0.03)"/>
+</svg>
