@@ -71,7 +71,7 @@ const AdminUserDetails = ({ loaderData }: Route.ComponentProps) => {
                   src={
                     user.avatar?.url ||
                     `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                      `${user.firstName?.[0] || ""}${user.lastName?.[0] || ""}`
+                      `${user.firstName?.[0] || ""}${user.lastName?.[0] || ""}`,
                     )}&background=0ea5e9&color=fff&size=200`
                   }
                   alt={`${user.firstName} ${user.lastName} avatar`}
@@ -88,12 +88,22 @@ const AdminUserDetails = ({ loaderData }: Route.ComponentProps) => {
               >
                 {user.isVerified ? "Verified" : "Unverified"}
               </span>
-              <span
-                className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusBadgeColor(user.account.status)}`}
-              >
-                {user.account.status.charAt(0).toUpperCase() +
-                  user.account.status.slice(1)}
-              </span>
+              <>
+                {user.isSuspended ? (
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800`}
+                  >
+                    Suspended
+                  </span>
+                ) : (
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusBadgeColor(user.account.status)}`}
+                  >
+                    {user.account.status.charAt(0).toUpperCase() +
+                      user.account.status.slice(1)}
+                  </span>
+                )}
+              </>
             </div>
           </div>
         </div>
@@ -231,7 +241,7 @@ const AdminUserDetails = ({ loaderData }: Route.ComponentProps) => {
                   <p className="mt-1 text-lg font-semibold text-gray-900">
                     {formatCurrency(
                       user.account.balance,
-                      user.account.currency
+                      user.account.currency,
                     )}
                   </p>
                 </div>

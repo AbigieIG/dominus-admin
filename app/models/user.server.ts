@@ -26,6 +26,7 @@ export interface IUser extends Document {
     country: string;
   };
   isVerified: boolean;
+  isSuspended: boolean;
   nationalId?: string;
   verificationToken?: string;
   passwordResetToken?: string;
@@ -151,6 +152,7 @@ const UserSchema: Schema = new Schema(
     },
     nationalId: { type: String, unique: true, sparse: true },
     isVerified: { type: Boolean, default: false },
+    isSuspended: { type: Boolean, default: false },
     verificationToken: { type: String, select: false },
     passwordResetToken: { type: String, select: false },
     passwordResetExpires: { type: Date, select: false },

@@ -72,6 +72,7 @@ export interface UserDto {
     country: string;
   };
   isVerified: boolean;
+  isSuspended: boolean;
   nationalId?: string;
   verificationToken?: string;
   passwordResetToken?: string;
@@ -125,6 +126,7 @@ export interface IUser {
     country: string;
   };
   isVerified: boolean;
+  isSuspended: boolean;
   nationalId?: string;
   joinDate: string;
   security: {

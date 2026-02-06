@@ -60,6 +60,7 @@ export async function action({
       country: formData.get("country") as string,
     },
     isVerified: formData.get("isVerified") === "on",
+    isSuspended: formData.get("isSuspended") === "on",
     security: {
       twoFactorEnabled: formData.get("twoFactorEnabled") === "on",
     },
@@ -147,6 +148,7 @@ export async function action({
     user.joinDate = new Date(userData.joinDate);
     user.address = userData.address;
     user.isVerified = userData.isVerified;
+    user.isSuspended = userData.isSuspended;
     user.security.twoFactorEnabled = userData.security.twoFactorEnabled;
     user.notifications.email = userData.notifications.email;
     user.notifications.sms = userData.notifications.sms;
@@ -662,6 +664,21 @@ const AdminEditUser: React.FC<Route.ComponentProps> = ({ loaderData }) => {
                   className="ml-2 block text-sm text-gray-900"
                 >
                   User is verified
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  name="isSuspended"
+                  id="isSuspended"
+                  defaultChecked={user.isSuspended}
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                />
+                <label
+                  htmlFor="isSuspended"
+                  className="ml-2 block text-sm text-gray-900"
+                >
+                  User is suspended
                 </label>
               </div>
 

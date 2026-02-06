@@ -360,7 +360,7 @@ const AdminUsersPage = () => {
                 -
                 {Math.min(
                   usersData.pagination.page * usersData.pagination.limit,
-                  usersData.pagination.total
+                  usersData.pagination.total,
                 )}{" "}
                 of {usersData.pagination.total.toLocaleString()} users
               </p>
@@ -465,7 +465,7 @@ const AdminUsersPage = () => {
                               src={
                                 user.avatar?.url ||
                                 `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                                  `${user.firstName?.[0] || ""}${user.lastName?.[0] || ""}`
+                                  `${user.firstName?.[0] || ""}${user.lastName?.[0] || ""}`,
                                 )}&background=0ea5e9&color=fff&size=200`
                               }
                               alt={`${user.firstName} ${user.lastName} avatar`}
@@ -499,20 +499,28 @@ const AdminUsersPage = () => {
                           {user.account?.balance !== undefined
                             ? formatCurrency(
                                 user.account.balance,
-                                user.account.currency
+                                user.account.currency,
                               )
                             : "N/A"}
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span
-                          className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                            user.account?.status
-                              ? getStatusColor(user.account.status)
-                              : "bg-gray-100 text-gray-800"
-                          }`}
-                        >
-                          {user.account?.status || "Unknown"}
+                        <span>
+                          {user.isSuspended ? (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                              suspended
+                            </span>
+                          ) : (
+                            <span
+                              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                                user.account?.status
+                                  ? getStatusColor(user.account.status)
+                                  : "bg-gray-100 text-gray-800"
+                              }`}
+                            >
+                              {user.account?.status || "Unknown"}
+                            </span>
+                          )}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -579,7 +587,7 @@ const AdminUsersPage = () => {
                             src={
                               user.avatar?.url ||
                               `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                                `${user.firstName?.[0] || ""}${user.lastName?.[0] || ""}`
+                                `${user.firstName?.[0] || ""}${user.lastName?.[0] || ""}`,
                               )}&background=0ea5e9&color=fff&size=200`
                             }
                             alt={`${user.firstName} ${user.lastName} avatar`}
@@ -638,7 +646,7 @@ const AdminUsersPage = () => {
                           {user.account?.balance !== undefined
                             ? formatCurrency(
                                 user.account.balance,
-                                user.account.currency
+                                user.account.currency,
                               )
                             : "N/A"}
                         </div>
@@ -646,15 +654,21 @@ const AdminUsersPage = () => {
                       <div>
                         <span className="text-gray-500">Status:</span>
                         <div className="mt-1">
-                          <span
-                            className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                              user.account?.status
-                                ? getStatusColor(user.account.status)
-                                : "bg-gray-100 text-gray-800"
-                            }`}
-                          >
-                            {user.account?.status || "Unknown"}
-                          </span>
+                          {user.isSuspended ? (
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                              Suspended
+                            </span>
+                          ) : (
+                            <span
+                              className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
+                                user.account?.status
+                                  ? getStatusColor(user.account.status)
+                                  : "bg-gray-100 text-gray-800"
+                              }`}
+                            >
+                              {user.account?.status || "Unknown"}
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div>
@@ -710,7 +724,7 @@ const AdminUsersPage = () => {
                         {page}
                       </button>
                     );
-                  }
+                  },
                 )}
               </div>
 
